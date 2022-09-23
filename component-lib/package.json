@@ -19,8 +19,10 @@
     "loader/"
   ],
   "scripts": {
-    "build": "stencil build --docs",
-    "start": "stencil build --dev --watch --serve",
+    "magic": "npm run build && npm pack && cd ../micro-app && npm remove component-lib && npm install ../component-lib/component-lib-0.0.1.tgz && npm run start",
+    "build": "stencil build --docs && node scripts/patch-loader.js",
+    "patch-loader": "node scripts/patch-loader.js",
+    "start": "stencil build --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate"
@@ -32,7 +34,8 @@
     "@types/jest": "^27.0.3",
     "jest": "^27.4.5",
     "jest-cli": "^27.4.5",
-    "puppeteer": "^10.0.0"
+    "puppeteer": "^10.0.0",
+    "fs-extra": "^10.1.0"
   },
   "license": "MIT"
 }

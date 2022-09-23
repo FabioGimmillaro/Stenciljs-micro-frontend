@@ -1,14 +1,15 @@
-import {Component, h, Host} from '@stencil/core';
+import {Component, ComponentInterface, h} from '@stencil/core';
 
 @Component({
   tag: 'my-component',
   styleUrl: 'my-component.css',
   shadow: true,
 })
-export class MyComponent {
+export class MyComponent implements ComponentInterface {
+  connectedCallback() {
+    console.log("Try:", 1);
+  }
   render() {
-    return <Host>
-      This is Version 1.0
-    </Host>;
+    return <slot />;
   }
 }
