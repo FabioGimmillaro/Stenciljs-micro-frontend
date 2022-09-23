@@ -13,6 +13,12 @@
   <script nomodule src="/build/app.js"></script>
   <link href="/build/app.css" rel="stylesheet">
 
+  <script type="module">
+    import {defineCustomElements} from "http://localhost:8080/loader/index.js";
+    console.log(defineCustomElements);
+    defineCustomElements(window)
+  </script>
+
   <link rel="apple-touch-icon" href="/assets/icon/icon.png">
   <link rel="icon" type="image/x-icon" href="/assets/icon/favicon.ico">
   <link rel="manifest" href="/manifest.json">
@@ -20,6 +26,7 @@
 <body>
 
   <app-root></app-root>
-
+  <micro-root></micro-root>
+<my-component-micro-app>Hello</my-component-micro-app>
 </body>
 </html>

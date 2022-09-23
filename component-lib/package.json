@@ -19,7 +19,11 @@
     "loader/"
   ],
   "scripts": {
-    "magic": "npm run build && npm pack && cd ../micro-app && npm remove component-lib && npm install ../component-lib/component-lib-0.0.1.tgz && npm run start",
+    "pack": "npm run build && npm pack",
+    "magic": "npm run pack && npm run build:micro && npm run start:app",
+    "serve:micro": "cd ../micro-app && http-server --cors",
+    "build:micro": "cd ../micro-app && npm remove component-lib && npm install ../component-lib/component-lib-0.0.1.tgz && npm run build",
+    "start:app": "cd ../app && npm run start",
     "build": "stencil build --docs && node scripts/patch-loader.js",
     "patch-loader": "node scripts/patch-loader.js",
     "start": "stencil build --watch --serve",

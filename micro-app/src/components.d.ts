@@ -7,60 +7,60 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { MatchResults } from "@stencil/router";
 export namespace Components {
-    interface AppHome {
+    interface MicroHome {
     }
-    interface AppProfile {
+    interface MicroProfile {
         "match": MatchResults;
     }
-    interface AppRoot {
+    interface MicroRoot {
     }
 }
 declare global {
-    interface HTMLAppHomeElement extends Components.AppHome, HTMLStencilElement {
+    interface HTMLMicroHomeElement extends Components.MicroHome, HTMLStencilElement {
     }
-    var HTMLAppHomeElement: {
-        prototype: HTMLAppHomeElement;
-        new (): HTMLAppHomeElement;
+    var HTMLMicroHomeElement: {
+        prototype: HTMLMicroHomeElement;
+        new (): HTMLMicroHomeElement;
     };
-    interface HTMLAppProfileElement extends Components.AppProfile, HTMLStencilElement {
+    interface HTMLMicroProfileElement extends Components.MicroProfile, HTMLStencilElement {
     }
-    var HTMLAppProfileElement: {
-        prototype: HTMLAppProfileElement;
-        new (): HTMLAppProfileElement;
+    var HTMLMicroProfileElement: {
+        prototype: HTMLMicroProfileElement;
+        new (): HTMLMicroProfileElement;
     };
-    interface HTMLAppRootElement extends Components.AppRoot, HTMLStencilElement {
+    interface HTMLMicroRootElement extends Components.MicroRoot, HTMLStencilElement {
     }
-    var HTMLAppRootElement: {
-        prototype: HTMLAppRootElement;
-        new (): HTMLAppRootElement;
+    var HTMLMicroRootElement: {
+        prototype: HTMLMicroRootElement;
+        new (): HTMLMicroRootElement;
     };
     interface HTMLElementTagNameMap {
-        "app-home": HTMLAppHomeElement;
-        "app-profile": HTMLAppProfileElement;
-        "app-root": HTMLAppRootElement;
+        "micro-home": HTMLMicroHomeElement;
+        "micro-profile": HTMLMicroProfileElement;
+        "micro-root": HTMLMicroRootElement;
     }
 }
 declare namespace LocalJSX {
-    interface AppHome {
+    interface MicroHome {
     }
-    interface AppProfile {
+    interface MicroProfile {
         "match"?: MatchResults;
     }
-    interface AppRoot {
+    interface MicroRoot {
     }
     interface IntrinsicElements {
-        "app-home": AppHome;
-        "app-profile": AppProfile;
-        "app-root": AppRoot;
+        "micro-home": MicroHome;
+        "micro-profile": MicroProfile;
+        "micro-root": MicroRoot;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "app-home": LocalJSX.AppHome & JSXBase.HTMLAttributes<HTMLAppHomeElement>;
-            "app-profile": LocalJSX.AppProfile & JSXBase.HTMLAttributes<HTMLAppProfileElement>;
-            "app-root": LocalJSX.AppRoot & JSXBase.HTMLAttributes<HTMLAppRootElement>;
+            "micro-home": LocalJSX.MicroHome & JSXBase.HTMLAttributes<HTMLMicroHomeElement>;
+            "micro-profile": LocalJSX.MicroProfile & JSXBase.HTMLAttributes<HTMLMicroProfileElement>;
+            "micro-root": LocalJSX.MicroRoot & JSXBase.HTMLAttributes<HTMLMicroRootElement>;
         }
     }
 }

@@ -2,6 +2,7 @@ import { Config } from '@stencil/core';
 
 export const config: Config = {
   namespace: 'component-lib',
+  globalScript: 'src/global/global.ts',
   extras: {
     tagNameTransform: true,
   },

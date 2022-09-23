@@ -1,4 +1,5 @@
-import {Component, ComponentInterface, h} from '@stencil/core';
+import {Component, ComponentInterface} from '@stencil/core';
+import {h} from "../../utils/render.interceptor";
 
 @Component({
   tag: 'my-component',
@@ -6,10 +7,12 @@ import {Component, ComponentInterface, h} from '@stencil/core';
   shadow: true,
 })
 export class MyComponent implements ComponentInterface {
-  connectedCallback() {
-    console.log("Try:", 1);
-  }
   render() {
-    return <slot />;
+    return (
+      <div>
+        <p>This is an input</p>
+        <my-input />
+      </div>
+    );
   }
 }

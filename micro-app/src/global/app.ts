@@ -1,4 +1,3 @@
-import "component-lib";
 import {defineCustomElements} from "component-lib/loader";
 
 export default async () => {
