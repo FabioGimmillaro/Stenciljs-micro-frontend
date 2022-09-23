@@ -1,0 +1,9 @@
+.idea/
+.vscode/
+.history/
+node_modules/
+
+dist-package/
+*.iml
+
+.DS_Store
