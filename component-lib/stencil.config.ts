@@ -2,6 +2,11 @@ import { Config } from '@stencil/core';
 
 export const config: Config = {
   namespace: 'component-lib',
+  globalScript: 'src/global/global.ts',
+  extras: {
+    tagNameTransform: true,
+    scriptDataOpts: true,
+  },
   outputTargets: [
     {
       type: 'dist',
@@ -9,9 +14,6 @@ export const config: Config = {
     },
     {
       type: 'dist-custom-elements',
-    },
-    {
-      type: 'docs-readme',
     },
     {
       type: 'www',
