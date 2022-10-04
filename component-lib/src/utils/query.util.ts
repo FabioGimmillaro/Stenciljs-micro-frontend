@@ -1,5 +1,6 @@
-import { getTransformationFunction } from '../global/global';
+import { componentLibTagTransformer } from "../index";
+
 export function transformTag(tag: string): string {
   const isCustomElement = tag.startsWith('my-');
-  return isCustomElement ? getTransformationFunction()?.(tag) ?? tag : tag;
+  return isCustomElement ? componentLibTagTransformer(tag) : tag;
 }

@@ -16,9 +16,18 @@
     <link rel="apple-touch-icon" href="/assets/icon/icon.png" />
     <link rel="icon" type="image/x-icon" href="/assets/icon/favicon.ico" />
     <link rel="manifest" href="/manifest.json" />
+
+
+    <script type="module">
+      import {defineCustomElements} from "http://localhost:8080/loader/index.es2017.js";
+      defineCustomElements(window)
+    </script>
+
   </head>
   <body>
     <p>Pe</p>
-    <my-component>Hello</my-component>
+    <main-app-my-component>Hello</main-app-my-component>
+
+    <micro-home></micro-home>
   </body>
 </html>

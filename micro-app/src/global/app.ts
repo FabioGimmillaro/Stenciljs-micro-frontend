@@ -1,3 +1,4 @@
+import {setTransformHandler} from "component-lib";
 import {defineCustomElements} from "component-lib/loader";
 
 export default async () => {
@@ -6,8 +7,11 @@ export default async () => {
    * exported by the global script. Ensure all of the code in the global script
    * is wrapped in the function() that is exported.
    */
+
+   const tagTransformer = (tag) => tag + '-micro-app';
+   setTransformHandler(tagTransformer)
+
   defineCustomElements(window, {
-    transformTagName: (tag) => `${tag}-micro-app`,
-    uniqueIdentifier:"blub"
+    transformTagName: tagTransformer,
   } as any);
 };

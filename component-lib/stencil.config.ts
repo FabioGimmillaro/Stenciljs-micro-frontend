@@ -2,7 +2,10 @@ import { Config } from '@stencil/core';
 
 export const config: Config = {
   namespace: 'component-lib',
-  globalScript: 'src/global/global.ts',
+  bundles: [
+    {components: ['my-component']},
+    {components: ['my-input']}
+  ],
   extras: {
     tagNameTransform: true,
   },

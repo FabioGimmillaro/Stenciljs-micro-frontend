@@ -1,5 +1,5 @@
 import { Component } from '@stencil/core';
-import {h} from "../../utils/render.interceptor";
+import { h } from "../../utils/render.interceptor";
 
 @Component({
   tag: 'my-input',
