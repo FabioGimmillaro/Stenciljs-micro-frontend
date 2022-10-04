@@ -10,11 +10,6 @@ export function h(...args: any[]): ReturnType<typeof defaultStencilRender> {
     newTagName = transformTag(tagName);
   }
 
-  console.log();
-  
-
-
-  console.log('INTERCEPTED: ', tagName, ' -> ', newTagName);
   const arr = args.slice(2);
   const tuple = [newTagName, args[1], arr] as const;
 
