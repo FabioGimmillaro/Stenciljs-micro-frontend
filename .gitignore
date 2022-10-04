@@ -7,3 +7,5 @@ dist-package/
 *.iml
 
 .DS_Store
+
+*.tgz

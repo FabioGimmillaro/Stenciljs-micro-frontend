@@ -10,7 +10,7 @@ export class MicroRoot {
     return (
       <div>
         <header>
-          <h1>Stencil App Starter</h1>
+          <h1>Micro Framework :-)</h1>
         </header>
 
         <main>

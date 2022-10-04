@@ -3,19 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
-    <title>Stencil Component Starter</title>
 
-    <script type="module">
-      import { defineCustomElements } from "/build/loader/index.js";
-      console.log(defineCustomElements);
-      defineCustomElements(window, {
-        transformTagName: (tag) => `${tag}-bla`
-      });
-    </script>
+    <script type="module" src="/build/component-lib.esm.js"></script>
+    <script nomodule src="/build/component-lib.js"></script>
+
+    <title>Component-Lib</title>
   </head>
   <body>
-    <my-component-bla>
-      Hello
-    </my-component-bla>
+    <my-component> Hello </my-component>
   </body>
 </html>

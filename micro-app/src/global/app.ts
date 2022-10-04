@@ -7,6 +7,7 @@ export default async () => {
    * is wrapped in the function() that is exported.
    */
   defineCustomElements(window, {
-    transformTagName: (tag) => `${tag}-micro-app`
+    transformTagName: (tag) => `${tag}-micro-app`,
+    uniqueIdentifier:"blub"
   } as any);
 };
