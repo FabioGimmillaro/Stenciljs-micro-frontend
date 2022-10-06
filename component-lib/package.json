@@ -26,7 +26,7 @@
     "build:micro": "cd ../micro-app && npm remove component-lib && npm install ../component-lib/component-lib-0.0.1.tgz && npm run build",
     "build:microv2": "cd ../micro-app && npm remove component-lib && npm install ../component-lib/component-lib-0.0.2.tgz && npm run build",
     "start:app": "cd ../app && npm run start",
-    "build": "stencil build --docs && node scripts/patch-loader.js",
+    "build": "node scripts/generate-components.js && stencil build --docs && node scripts/patch-loader.js",
     "patch-loader": "node scripts/patch-loader.js",
     "start": "stencil build --watch --serve",
     "test": "stencil test --spec --e2e",

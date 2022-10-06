@@ -32,6 +32,6 @@
   },
   "license": "MIT",
   "dependencies": {
-    "component-lib": "../component-lib"
+    "component-lib": "file:../component-lib/component-lib-0.0.1.tgz"
   }
 }

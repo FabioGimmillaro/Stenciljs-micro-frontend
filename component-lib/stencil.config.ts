@@ -1,11 +1,9 @@
 import { Config } from '@stencil/core';
+const COMPONENTS = require('./scripts/components.generated')
 
 export const config: Config = {
   namespace: 'component-lib',
-  bundles: [
-    {components: ['my-component']},
-    {components: ['my-input']}
-  ],
+  bundles: COMPONENTS,
   extras: {
     tagNameTransform: true,
   },
