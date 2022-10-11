@@ -13,32 +13,12 @@ export const config: Config = {
     {
       type: 'dist',
       esmLoaderPath: '../loader',
-      copy: [
-        {
-          src: "../node_modules/component-lib/dist/esm",
-          dest: ".",
-        },
-        {
-          src: "../node_modules/component-lib/dist/esm",
-          dest: "../esm-es5",
-        },
-        {
-          src: "../node_modules/component-lib/dist/esm",
-          dest: "../esm",
-        }
-      ]
     },
     {
       type: 'www',
       // comment the following line to disable service workers in production
       serviceWorker: null,
       baseUrl: 'https://myapp.local/',
-      copy: [
-        {
-          src: "../node_modules/component-lib/dist/esm",
-          dest: "build",
-        }
-      ]
     },
   ],
 };

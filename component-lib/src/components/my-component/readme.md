@@ -5,6 +5,13 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property | Attribute | Description | Type     | Default   |
+| -------- | --------- | ----------- | -------- | --------- |
+| `hello`  | `hello`   |             | `string` | `"hello"` |
+
+
 ## Dependencies
 
 ### Depends on
